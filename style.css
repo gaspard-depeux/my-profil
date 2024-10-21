@@ -1,0 +1,200 @@
+body {
+    font-family: 'Verdana', 
+
+
+
+
+
+
+
+
+
+
+
+
+
+     sans-serif;
+    background-color: #e9ecef;
+    color: #2c3e50;
+}
+
+.container {
+    max-width: 700px;  
+
+
+
+
+
+
+
+
+
+
+
+    margin: 20px auto;
+}
+
+.card-white {
+    background-color: #ffffff;
+     
+
+
+
+
+
+
+
+
+
+
+
+     padding: 30px; /* Augmentation du padding pour rendre les sections plus hautes */
+    
+
+
+
+     margin: 30px 0; /* Plus de marge entre les sections */
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #34495e;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #c0392b;
+}
+
+.profile-img {
+    
+
+
+
+
+
+
+
+
+     border-radius: 50%;
+          
+
+              width: 252px; /* Augmentation de la taille de l'image de 1,4x (par rapport à 180px) */
+               height: 252px;
+    object-fit: cover;
+           display: block;
+    margin: 30px auto; /* Plus de marge autour de l'image */
+}
+
+.button {
+    display: inline-block;
+                             padding: 12px 24px;
+    background-color: #27ae60;
+                color: white;
+
+
+
+    text-decoration: none;
+     border-radius: 5px;
+    margin-top: 20px;
+               text-align: center;
+}
+
+.button:hover {
+    background-color: #2ecc71;
+}
+
+.social-links {
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+      list-style: none;
+                                         padding: 0;
+    display: flex; 
+
+
+
+
+
+
+
+
+
+
+
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.social-links li {
+    margin: 0 20px;
+}
+
+.social-links a {
+     
+
+
+
+
+
+
+          color: #27ae60;
+     
+
+
+
+
+
+         text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.social-links a:hover {
+     
+
+
+
+
+
+
+
+
+
+
+
+     text-decoration: underline;
+    color: #c0392b;
+}
