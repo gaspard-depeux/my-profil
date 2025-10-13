@@ -246,4 +246,4 @@ export interface OnboardingData {
   }
 }
 
-export default Database
+export type { Database as default }

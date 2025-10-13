@@ -8,6 +8,7 @@ import {
   UserStats,
   AIInteraction,
   TransactionFormData,
+  Achievement,
   GoalFormData,
   BudgetFormData,
   TransactionFilters,

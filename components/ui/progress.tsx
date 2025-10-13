@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import * as ProgressPrimitive from "@radix-ui/react-progress"
+import { Root, Indicator } from "@radix-ui/react-progress"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils/cn"
 
@@ -40,7 +40,7 @@ const progressIndicatorVariants = cva(
 )
 
 export interface ProgressProps
-  extends React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>,
+  extends React.ComponentPropsWithoutRef<typeof Root>,
     VariantProps<typeof progressVariants> {
   variant?: VariantProps<typeof progressIndicatorVariants>["variant"]
   showLabel?: boolean
@@ -49,7 +49,7 @@ export interface ProgressProps
 }
 
 const Progress = React.forwardRef<
-  React.ElementRef<typeof ProgressPrimitive.Root>,
+  React.ElementRef<typeof Root>,
   ProgressProps
 >(({ 
   className, 
@@ -64,10 +64,10 @@ const Progress = React.forwardRef<
   const [animatedValue, setAnimatedValue] = React.useState(0)
 
   React.useEffect(() => {
-    if (animated && value !== undefined) {
+    if (animated && value !== undefined && value !== null) {
       const timer = setTimeout(() => setAnimatedValue(value), 100)
       return () => clearTimeout(timer)
-    } else if (value !== undefined) {
+    } else if (value !== undefined && value !== null) {
       setAnimatedValue(value)
     }
   }, [value, animated])
@@ -88,23 +88,23 @@ const Progress = React.forwardRef<
           )}
         </div>
       )}
-      <ProgressPrimitive.Root
+      <Root
         ref={ref}
         className={cn(progressVariants({ size, className }))}
         {...props}
       >
-        <ProgressPrimitive.Indicator
+        <Indicator
           className={cn(progressIndicatorVariants({ variant }))}
           style={{ 
             transform: `translateX(-${100 - displayValue}%)`,
             transition: animated ? 'transform 1000ms ease-out' : 'none'
           }}
         />
-      </ProgressPrimitive.Root>
+      </Root>
     </div>
   )
 })
-Progress.displayName = ProgressPrimitive.Root.displayName
+Progress.displayName = "Progress"
 
 // Circular Progress Component
 export interface CircularProgressProps {
