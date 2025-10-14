@@ -10,7 +10,11 @@ export const metadata: Metadata = {
   description: 'Transformez votre budget tracking en une expérience ludique et motivante avec FlowTrack.',
   keywords: ['budget', 'finance', 'épargne', 'gestion financière', 'gamification'],
   authors: [{ name: 'FlowTrack Team' }],
-  viewport: 'width=device-width, initial-scale=1',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
   themeColor: '#6366F1',
 }
 
